@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.container {
+  max-width: 420px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  font-size: 2rem;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  padding:10px;
+}
+.modifiers button {
+  background-color: #ccc;
+  flex: 1;
+}
+.operations button {
+  background-color: orange;
+  width: 50px;
+  flex: 1;
+}
+.digits button {
+  flex: 1 0 33%;
+}
+.digits button {
+  background-color: #efefef;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* All things Grid, Flexbox, Box Alignment */
+.wrapper,
+.subgrid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.wrapper_in{display: flex; flex-wrap: wrap;}
+.modifiers {
+  display: flex;
+}
+.operations {
+ display: flex;
+ flex-direction: column;
+}
+.digits {
+  grid-area: digit;
 }
 
-.App-link {
-  color: #61dafb;
+.result {
+ height: 50px; font-weight: bold;  font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modifiers {
+ display: flex; flex: 1;
+}
+
+.digits {
+  display: flex;
+  flex-wrap: wrap;
 }
