@@ -6,8 +6,11 @@ import CalculatorClassWithState from './components/CalculatorClassWithState';
 function App() {
   return (
     <div className="App">
+      With Functional Components
       <CalculatorFunctionWithHooks />
       <hr />
+
+      With Class Components
       <CalculatorClassWithState />
     </div>
   );
